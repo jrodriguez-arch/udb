@@ -61,7 +61,7 @@ def predict():
         pred_original = float(np.expm1(pred_log))
 
         return jsonify({
-            "prediction": pred_original
+            "predicted_value": pred_original
         })
 
     except Exception as e:
@@ -71,4 +71,4 @@ def predict():
         }), 500
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5000)
